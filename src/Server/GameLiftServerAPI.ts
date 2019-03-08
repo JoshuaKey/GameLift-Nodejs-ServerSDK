@@ -12,6 +12,8 @@ import { StopMatchBackfillRequest } from "./Model/StopMatchBackfillRequest";
 
 export class GameLiftServerAPI {
   static sdkVersion: string = '3.2.1'
+  static region: string = 'us-east-2'
+  static isLocal: boolean = true;
 
   public static GetSdkVersion(): AwsStringOutcome {
     return new AwsStringOutcome(GameLiftServerAPI.sdkVersion)
@@ -77,4 +79,21 @@ export class GameLiftServerAPI {
     ServerState.Instance.Shutdown()
     return new GenericOutcome()
   }
+
+  public static GetRegion(): string {
+    return GameLiftServerAPI.region;
+  }
+
+  public static IsLocal(): boolean {
+    return GameLiftServerAPI.isLocal;
+  }
+
+  public static SetRegion(region: string): void {
+    GameLiftServerAPI.region = region;
+  }
+
+  public static SetIsLocal(isLocal: boolean): void {
+    GameLiftServerAPI.isLocal = isLocal;
+  }
+  
 }

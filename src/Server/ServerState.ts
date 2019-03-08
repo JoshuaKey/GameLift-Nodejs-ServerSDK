@@ -218,7 +218,10 @@ export class ServerState implements IAuxProxyMessageHandler {
   }
 
   CreateURI(): string {
-    const endpoint = `http://${ServerState.HOSTNAME}:${ServerState.PORT}`
+    let endpoint = `http://${ServerState.HOSTNAME}:${ServerState.PORT}`;
+    if(!GameLiftServerAPI.IsLocal()){
+      endpoint = `https://gamelift.${GameLiftServerAPI.GetRegion()}.amazonaws.com:${ServerState.PORT}`
+    }
     return endpoint
   }
 

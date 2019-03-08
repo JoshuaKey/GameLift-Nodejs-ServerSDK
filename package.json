@@ -35,18 +35,22 @@
     "cpx": "^1.5.0",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
+    "ts-node": "^8.0.3",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.12.0",
     "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.8.3"
+    "typescript": "^2.9.2"
   },
   "dependencies": {
+    "@types/exit-hook": "^1.1.0",
     "debug": "^3.1.0",
+    "exit-hook": "^2.0.0",
     "long": "^4.0.0",
     "p-defer": "^1.0.0",
     "p-timeout": "^2.0.1",
     "protobufjs": "^6.8.6",
     "sleep-promise": "^6.0.0",
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.1.1",
+    "typescript-require": "^0.2.10"
   }
 }
